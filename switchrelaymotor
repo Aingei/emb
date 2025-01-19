@@ -1,0 +1,30 @@
+// #define MOTOR       23
+#define TRAN_PIN_1 23
+#define TRAN_PIN_2 22
+#define TRAN_PIN_7 19
+#define LED 18
+#define LEDBACK 5
+
+void setup()
+{
+    pinMode(TRAN_PIN_1, OUTPUT);
+    pinMode(TRAN_PIN_2, OUTPUT);
+    pinMode(TRAN_PIN_7, OUTPUT);
+    pinMode(LED, OUTPUT);
+    pinMode(LEDBACK, OUTPUT);
+}
+
+void loop()
+{
+    digitalWrite(TRAN_PIN_1, HIGH);
+    digitalWrite(TRAN_PIN_2, HIGH);
+    digitalWrite(TRAN_PIN_7, LOW);
+    digitalWrite(LED, HIGH);
+    digitalWrite(LEDBACK, LOW);
+    delay(5000); // Wait for 5000 millisecond(s)
+    digitalWrite(TRAN_PIN_1, HIGH);
+    digitalWrite(TRAN_PIN_2, LOW);
+    digitalWrite(TRAN_PIN_7, HIGH);
+    digitalWrite(LED, LOW);
+    digitalWrite(LEDBACK, HIGH);
+    delay(5000); // Wait for 5000 millisecond(s)

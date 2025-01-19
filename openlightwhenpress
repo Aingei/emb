@@ -1,0 +1,15 @@
+void setup()
+{
+    pinMode(8, INPUT);  // set arduino pin to input mode
+    pinMode(3, OUTPUT); // set arduino pin to output mode
+}
+void loop()
+{
+    if (digitalRead(8) == LOW)
+    {
+        digitalWrite(3, HIGH);
+    }
+}
+
+// Pull-up Resistor — เป็นวงจรที่ทำให้สถานะของ pin 8 เป็น high เวลาที่ปุ่มไม่ถูกกด
+// หากไม่มีตัวต้านทานนี้ จะทำให้สถานะของ pin 8 แกว่งระหว่าง high-low ได้ และทำให้เกิดพฤติกรรมที่ไม่พึงประสงค์ขึ้นได้

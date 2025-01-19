@@ -1,0 +1,27 @@
+int count = 0;
+int buttonstate = 1;
+
+void setup() {
+  pinMode(8, INPUT); // set arduino pin to input mode
+  pinMode(3, OUTPUT);  // set arduino pin to output mode
+}
+void loop() {
+  
+  //buttonstate = digitalread(8);
+  
+  if(digitalRead(8)==LOW) { 
+    digitalWrite(3, HIGH);
+    
+    if(buttonstate == 1){
+    count++;
+    buttonstate = 0;
+    Serial.println(count);
+    
+    }
+    
+  }else {                        
+    digitalWrite(LED, LOW);  
+    buttonstate =1;
+         
+  }
+}
